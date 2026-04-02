@@ -95,55 +95,10 @@ export default function TeamPage() {
             description="An elite unit of cross-disciplinary experts in Systems Architecture, Product Marketing, Creative Engineering, AI QA, and Data Acquisition."
           />
 
-          {/* Featured — Sam (CPO) */}
-          <FadeIn>
-            <div className="mb-8 rounded-2xl overflow-hidden border border-steel-light/50 bg-white hover:shadow-xl transition-all duration-300">
-              <div className={`h-2 bg-gradient-to-r ${teamMembers[0].gradient}`} />
-              <div className="p-8 md:p-10 md:flex md:gap-10 items-start">
-                {/* Avatar */}
-                <div className="shrink-0 mb-6 md:mb-0">
-                  <div className={`w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br ${teamMembers[0].gradient} flex items-center justify-center shadow-lg shadow-steel/20`}>
-                    <span className="text-3xl md:text-4xl font-extrabold text-white/90">{teamMembers[0].initial}</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-1">
-                    <h3 className="text-xl md:text-2xl font-extrabold text-text-primary tracking-tight">{teamMembers[0].name}</h3>
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-sky bg-sky/10 px-2.5 py-1 rounded-full">Founder</span>
-                  </div>
-                  <p className="text-sm font-semibold text-steel mb-4">{teamMembers[0].role}</p>
-                  <p className="text-sm text-text-secondary leading-relaxed mb-6 max-w-2xl font-body">{teamMembers[0].bio}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {teamMembers[0].skills.map((skill) => (
-                      <span key={skill} className="text-xs font-medium text-text-primary bg-ice border border-steel-light/60 px-3 py-1.5 rounded-lg">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="pt-5 border-t border-steel-light/50">
-                    <p className="text-[10px] font-mono uppercase tracking-wider text-text-secondary mb-2.5">Key Focus</p>
-                    <div className="flex flex-wrap gap-x-6 gap-y-1.5">
-                      {teamMembers[0].focus.map((f) => (
-                        <div key={f} className="flex items-center gap-2 text-sm text-text-primary">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky to-steel shrink-0" />
-                          {f}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Rest of the team — 2x2 grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {teamMembers.slice(1).map((member, i) => (
-              <FadeIn key={member.name} delay={i * 0.12}>
+          {/* Equal grid — 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.map((member, i) => (
+              <FadeIn key={member.name} delay={i * 0.1}>
                 <div className="group relative rounded-2xl overflow-hidden h-full border border-steel-light/50 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                   <div className={`h-1.5 bg-gradient-to-r ${member.gradient}`} />
 
