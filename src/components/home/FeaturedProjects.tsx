@@ -43,21 +43,13 @@ export default function FeaturedProjects() {
                     className="relative bg-white rounded-2xl overflow-hidden border border-steel-light/50 shadow-sm hover:shadow-xl transition-shadow h-full"
                   >
                     {/* Project visual */}
-                    <div className={`bg-gradient-to-br ${categoryColors[project.category] || "from-steel-dark to-steel"} ${isLarge ? "h-56 md:h-64" : "h-48"} relative overflow-hidden`}>
-                      {/* Abstract pattern */}
-                      <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <pattern id={`p-${i}`} width="40" height="40" patternUnits="userSpaceOnUse">
-                            <circle cx="20" cy="20" r="1" fill="white" />
-                          </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill={`url(#p-${i})`} />
-                      </svg>
-
-                      {/* Big letter */}
-                      <div className="absolute bottom-4 right-6 text-white/[0.07] text-[140px] font-extrabold leading-none">
-                        {project.title.charAt(0)}
-                      </div>
+                    <div className={`${isLarge ? "h-56 md:h-64" : "h-48"} relative overflow-hidden`}>
+                      <img
+                        src={project.thumbnail}
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${categoryColors[project.category] || "from-steel-dark to-steel"} opacity-40`} />
 
                       {/* Category badge */}
                       <div className="absolute top-4 left-4">

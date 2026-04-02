@@ -9,8 +9,13 @@ export default function ProjectCard({ project }: { project: Project }) {
     <motion.div layout layoutId={project.slug} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <Link href={`/portfolio/${project.slug}`} className="group block">
         <div className="bg-white rounded-2xl overflow-hidden border border-steel-light hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
-          <div className="h-48 bg-gradient-to-br from-steel-light to-sky/30 flex items-center justify-center">
-            <div className="text-steel/20 text-7xl font-extrabold">{project.title.charAt(0)}</div>
+          <div className="h-48 relative overflow-hidden">
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
           <div className="p-6">
             <div className="flex items-center gap-3 mb-3">

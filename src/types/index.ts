@@ -18,6 +18,7 @@ export interface Project {
 export interface Service {
   title: string;
   icon: string;
+  pitch: string;
   description: string;
   capabilities: string[];
   href: string;
