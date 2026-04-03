@@ -29,6 +29,17 @@ const config: Config = {
           800: "#2E4A5A",
           900: "#1E3344",
         },
+        // Legacy color tokens used across pages
+        steel: {
+          DEFAULT: "#57819B",
+          dark: "#3D5B6E",
+          light: "#C4DFEC",
+        },
+        sky: "#A9E0F6",
+        ice: "#F4FAFE",
+        charcoal: "#1E3344",
+        "text-primary": "#2E4A5A",
+        "text-secondary": "#7A9BAD",
       },
       fontFamily: {
         sans: ["var(--font-sora)", ...defaultTheme.fontFamily.sans],
