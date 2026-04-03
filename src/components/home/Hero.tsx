@@ -199,7 +199,7 @@ export default function Hero() {
                 {i > 0 && <div className="w-px h-8 bg-white/10 -ml-6 mr-3 hidden md:block" />}
                 <div className="text-center">
                   <div className="text-xl md:text-2xl font-extrabold text-white">{stat.value}</div>
-                  <div className="text-[10px] text-white/35 font-mono uppercase tracking-wider">{stat.label}</div>
+                  <div className="text-[10px] text-white/60 font-mono uppercase tracking-wider">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -208,7 +208,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-neutral-50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-40 bg-gradient-to-t from-neutral-50 to-transparent" />
     </section>
   );
 }

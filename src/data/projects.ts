@@ -142,27 +142,4 @@ export const projects: Project[] = [
     screenshots: [],
     featured: false,
   },
-  {
-    slug: "bengali-fake-news-detection",
-    title: "Bengali Fake News Detection — LSTM Ensemble",
-    client: "QPAIN 2026 (IEEE Xplore)",
-    industry: "AI Research & NLP",
-    year: 2026,
-    category: "ai-data",
-    thumbnail: "https://images.unsplash.com/photo-1504711434969-e33886168d5c?w=800&q=85&auto=format&fit=crop",
-    description: "Multi-layered LSTM ensemble for misinformation detection in Bangladeshi media, published at IEEE",
-    challenge:
-      "Misinformation in Bengali-language media is rampant, and existing NLP models are trained primarily on English corpora. There was no robust, ensemble-based approach specifically targeting Bengali fake news at corpus level.",
-    approach:
-      "Designed a multi-layer LSTM ensemble architecture optimized for Bengali text classification. Achieved 82.43% accuracy through ensemble optimization and corpus-level evaluation. The research was published at QPAIN 2026 on IEEE Xplore, contributing to Bangladeshi media integrity.",
-    techStack: ["Python", "TensorFlow", "LSTM", "NLP", "Ensemble Learning", "IEEE Xplore"],
-    results: [
-      { metric: "Detection Accuracy", value: "82.43%" },
-      { metric: "Published At", value: "IEEE Xplore" },
-      { metric: "Language", value: "Bengali" },
-      { metric: "Architecture", value: "Multi-Layer LSTM" },
-    ],
-    screenshots: [],
-    featured: false,
-  },
 ];
