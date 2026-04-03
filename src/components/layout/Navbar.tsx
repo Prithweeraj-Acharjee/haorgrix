@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const links = [
   { label: "HaorGrix", href: "/" },
   { label: "Our Projects", href: "/portfolio" },
+  { label: "Our Clients", href: "/clients" },
   { label: "Our Team", href: "/team" },
   { label: "Let's Talk", href: "/contact" },
 ];

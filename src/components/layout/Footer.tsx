@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-sky mb-4">Quick Links</h4>
             <div className="space-y-3">
-              {["Home", "Portfolio", "Team", "Contact"].map((item) => (
+              {["Home", "Portfolio", "Clients", "Team", "Contact"].map((item) => (
                 <Link key={item} href={item === "Home" ? "/" : `/${item.toLowerCase()}`} className="block text-sm text-white/60 hover:text-sky transition-colors">
                   {item}
                 </Link>
