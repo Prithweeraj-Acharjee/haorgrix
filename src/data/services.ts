@@ -12,7 +12,6 @@ export const services: Service[] = [
       "Progressive Web Apps (PWAs)",
       "Multi-Tenant SaaS Platforms",
     ],
-    href: "#",
   },
   {
     title: "AI Integration & Automation",
@@ -25,7 +24,6 @@ export const services: Service[] = [
       "Recommendation Engines",
       "Predictive Analytics Models",
     ],
-    href: "#",
   },
   {
     title: "Cloud Architecture & Migration",
@@ -38,7 +36,6 @@ export const services: Service[] = [
       "Database Optimization & Security Auditing",
       "CI/CD Pipeline Engineering",
     ],
-    href: "#",
   },
   {
     title: "Advanced Data Scraping & APIs",
@@ -51,7 +48,6 @@ export const services: Service[] = [
       "Licensed Custom APIs For Your Platform",
       "Competitor & Market Intelligence",
     ],
-    href: "#",
   },
   {
     title: "UI/UX Design Engineering",
@@ -64,6 +60,5 @@ export const services: Service[] = [
       "Responsive & Accessible Design Systems",
       "Conversion-Optimized Interfaces",
     ],
-    href: "#",
   },
 ];

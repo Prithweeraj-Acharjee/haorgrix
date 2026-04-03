@@ -21,7 +21,6 @@ export interface Service {
   pitch: string;
   description: string;
   capabilities: string[];
-  href: string;
 }
 
 export interface Stat {

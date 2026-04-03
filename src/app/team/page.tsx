@@ -105,8 +105,8 @@ export default function TeamPage() {
                   <div className="p-7">
                     {/* Header row */}
                     <div className="flex items-start gap-4 mb-4">
-                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${member.gradient} flex items-center justify-center shadow-lg shadow-steel/15 shrink-0`}>
-                        <span className="text-lg font-extrabold text-white/90">{member.initial}</span>
+                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${member.gradient} overflow-hidden shadow-lg shadow-steel/15 shrink-0`}>
+                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                       </div>
                       <div>
                         <h3 className="text-lg font-extrabold text-text-primary tracking-tight">{member.name}</h3>

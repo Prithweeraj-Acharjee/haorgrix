@@ -1,5 +1,5 @@
 "use client";
-import { Brain, Code2, TrendingUp, ArrowRight, Cloud, Database, Palette } from "lucide-react";
+import { Brain, Code2, TrendingUp, Cloud, Database, Palette } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { services } from "@/data/services";
@@ -56,12 +56,6 @@ export default function Pillars() {
                     ))}
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-steel-light/50">
-                    <span className="inline-flex items-center gap-2 text-sm font-bold text-steel group-hover:text-steel-dark transition-colors">
-                      Learn more
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
                 </div>
               </div>
             </FadeIn>
@@ -93,12 +87,6 @@ export default function Pillars() {
                     ))}
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-steel-light/50">
-                    <span className="inline-flex items-center gap-2 text-sm font-bold text-steel group-hover:text-steel-dark transition-colors">
-                      Learn more
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
                 </div>
               </div>
             </FadeIn>
