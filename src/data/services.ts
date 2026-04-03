@@ -38,9 +38,9 @@ export const services: Service[] = [
     ],
   },
   {
-    title: "Advanced Data Scraping & APIs",
+    title: "High-Volume Data Engineering",
     icon: "Database",
-    pitch: "We turn the internet into your personal database.",
+    pitch: "Turn unstructured web data into structured assets.",
     description: "Data is leverage. We engineer custom scraping pipelines capable of acquiring, cleaning, and structuring massive datasets from across the web. Whether you are aggregating competitor pricing, gathering real estate listings, or fueling a specialized AI model, our data engines are fast, stealthy, and reliable. Delivered as clean structured data or licensed custom APIs.",
     capabilities: [
       "Custom Data Pipelines & Scrapers",
@@ -53,7 +53,7 @@ export const services: Service[] = [
     title: "UI/UX Design Engineering",
     icon: "Palette",
     pitch: "Interfaces that convert, delight, and retain users.",
-    description: "We believe engineering starts with design. We build comprehensive design systems in Figma before a single line of code is written. Our approach balances premium aesthetics — animations, glassmorphism, precise typography — with rigid usability standards, ensuring your users effortlessly achieve their goals while experiencing a world-class interface.",
+    description: "We believe engineering starts with design. We build comprehensive design systems in Figma before a single line of code is written. Our approach balances distinct structural aesthetics — micro-animations, precise typography, math-driven spacing — with rigid usability standards, ensuring your users effortlessly achieve their goals through an intuitive interface.",
     capabilities: [
       "Wireframing & User Journey Mapping",
       "High-Fidelity UI Prototypes",

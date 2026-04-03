@@ -37,7 +37,7 @@ export default function FooterCTA() {
           </h2>
 
           <p className="mt-6 text-body text-white/40 max-w-lg mx-auto">
-            Whether you need an AI system, a scalable platform, or a complete digital transformation. Let&apos;s make it happen.
+            Whether you need autonomous automation, a scalable high-concurrency platform, or structural application engineering. We build to spec.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4 justify-center">

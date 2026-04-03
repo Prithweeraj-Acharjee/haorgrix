@@ -143,7 +143,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-caption text-accent/90 font-mono uppercase tracking-wider">AI / Software / Data / Growth</span>
+              <span className="text-caption text-accent/90 font-mono uppercase tracking-wider">AI • Software • Data • Growth</span>
             </div>
           </motion.div>
 
@@ -153,11 +153,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            We Build{" "}
+            We Engineer{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">
               Intelligent Systems
             </span>{" "}
-            for Modern Enterprises
+            That Scale
           </motion.h1>
 
           <motion.p
@@ -166,7 +166,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            From advanced AI and high concurrency backend infrastructure to premium digital experiences. We architect, build, and scale complete digital ecosystems.
+            From machine learning models and high-concurrency backend infrastructure to data-driven platforms — we architect and scale intelligent systems that drive measurable business impact.
           </motion.p>
 
           <motion.div
@@ -191,9 +191,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.7 }}
           >
             {[
-              { value: "25+", label: "Projects" },
-              { value: "99.9%", label: "Uptime" },
-              { value: "50M+", label: "Data Points" },
+              { value: "25+", label: "Projects Delivered" },
+              { value: "99.9%", label: "System Reliability" },
+              { value: "50M+", label: "Data Points Processed" },
             ].map((stat, i) => (
               <div key={stat.label} className="flex items-center gap-3">
                 {i > 0 && <div className="w-px h-8 bg-white/10 -ml-6 mr-3 hidden md:block" />}

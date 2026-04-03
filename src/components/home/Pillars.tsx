@@ -28,7 +28,7 @@ export default function Pillars() {
         <SectionHeading
           label="What We Do"
           title="Five Pillars of Execution"
-          description="We operate at the intersection of AI, full-stack engineering, cloud infrastructure, data intelligence, and premium design."
+          description="We operate at the intersection of AI, full-stack engineering, cloud infrastructure, data intelligence, and rigorous design systems."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
