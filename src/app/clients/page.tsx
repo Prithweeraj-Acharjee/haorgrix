@@ -11,7 +11,7 @@ export default function ClientsPage() {
   return (
     <div className="bg-ice">
       {/* Hero */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-[#2a4a5e] via-steel-dark to-steel">
+      <section className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-[#2a4a5e] via-steel-dark to-steel">
         <div className="absolute inset-0">
           <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -49,7 +49,7 @@ export default function ClientsPage() {
           </motion.div>
 
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]"
+            className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -61,7 +61,7 @@ export default function ClientsPage() {
           </motion.h1>
 
           <motion.p
-            className="mt-5 text-base md:text-lg text-white/45 max-w-2xl mx-auto leading-relaxed font-body"
+            className="mt-4 text-sm sm:text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed font-body px-2"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -71,7 +71,7 @@ export default function ClientsPage() {
           </motion.p>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-ice to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-32 bg-gradient-to-t from-ice to-transparent" />
       </section>
 
       {/* Clients */}
@@ -90,7 +90,7 @@ export default function ClientsPage() {
                   {/* Top accent */}
                   <div className={`h-1.5 bg-gradient-to-r ${client.gradient}`} />
 
-                  <div className="p-8 md:p-10">
+                  <div className="p-5 sm:p-8 md:p-10">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-8">
                       <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${client.gradient} flex items-center justify-center shadow-lg shadow-steel/15 shrink-0`}>

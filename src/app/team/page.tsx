@@ -11,7 +11,7 @@ export default function TeamPage() {
   return (
     <div className="bg-ice">
       {/* Hero */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-[#2a4a5e] via-steel-dark to-steel">
+      <section className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-br from-[#2a4a5e] via-steel-dark to-steel">
         {/* Grid background */}
         <div className="absolute inset-0">
           <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@ export default function TeamPage() {
           </motion.div>
 
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1]"
+            className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -63,7 +63,7 @@ export default function TeamPage() {
           </motion.h1>
 
           <motion.p
-            className="mt-5 text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed font-body"
+            className="mt-4 text-sm sm:text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed font-body px-2"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -83,11 +83,11 @@ export default function TeamPage() {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-ice to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-32 bg-gradient-to-t from-ice to-transparent" />
       </section>
 
       {/* Team Grid */}
-      <section className="py-24 md:py-28">
+      <section className="py-16 sm:py-24 md:py-28">
         <div className="max-w-site mx-auto px-6">
           <SectionHeading
             label="Our People"
@@ -96,7 +96,7 @@ export default function TeamPage() {
           />
 
           {/* Equal grid — 3 columns */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {teamMembers.map((member, i) => (
               <FadeIn key={member.name} delay={i * 0.1}>
                 <div className="group relative rounded-2xl overflow-hidden h-full border border-steel-light/50 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -104,7 +104,7 @@ export default function TeamPage() {
 
                   <div className="p-6 flex flex-col items-center text-center">
                     {/* Large square photo */}
-                    <div className="w-full h-[280px] bg-steel/10 rounded-xl overflow-hidden mb-6">
+                    <div className="w-full h-[240px] sm:h-[280px] bg-steel/10 rounded-xl overflow-hidden mb-5 sm:mb-6">
                       <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
                     </div>
 
@@ -145,7 +145,7 @@ export default function TeamPage() {
       </section>
 
       {/* Values Strip */}
-      <section className="py-20 bg-gradient-to-br from-[#2a4a5e] via-steel-dark to-steel relative overflow-hidden">
+      <section className="py-14 sm:py-20 bg-gradient-to-br from-[#2a4a5e] via-steel-dark to-steel relative overflow-hidden">
         <div className="absolute inset-0">
           <svg className="absolute inset-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -158,9 +158,9 @@ export default function TeamPage() {
         </div>
 
         <div className="relative z-10 max-w-site mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-xs font-black uppercase tracking-[0.4em] text-sky mb-4">Our Philosophy</p>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+          <div className="text-center mb-8 sm:mb-14">
+            <p className="text-xs font-black uppercase tracking-[0.4em] text-sky mb-3 sm:mb-4">Our Philosophy</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
               Engineering-First. Visually Stunning.
             </h2>
           </div>
