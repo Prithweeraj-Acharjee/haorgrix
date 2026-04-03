@@ -2,13 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  background-color: #F4FAFE;
-  color: #2E4A5A;
+  body {
+    background-color: #F4FAFE;
+    color: #2E4A5A;
+    @apply text-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.5;
+  }
 }
 
 ::selection {

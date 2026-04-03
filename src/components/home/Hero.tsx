@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#2a4a5e] via-steel-dark to-steel">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-neutral-900">
       {/* Grid background */}
       <div className="absolute inset-0 overflow-hidden">
         <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@ export default function Hero() {
             style={{ left: node.x, top: node.y }}
           >
             <motion.div
-              className="rounded-full bg-sky/30 border border-sky/20"
+              className="rounded-full bg-accent/30 border border-accent/20"
               style={{ width: node.size, height: node.size }}
               animate={{ opacity: [0.3, 0.8, 0.3], scale: [1, 1.4, 1] }}
               transition={{ duration: 4, delay: node.delay, repeat: Infinity }}
@@ -84,8 +84,8 @@ export default function Hero() {
         </svg>
 
         {/* Gradient orbs */}
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-sky/8 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-[#2a5a70]/40 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-accent/8 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-primary/40 rounded-full blur-3xl" />
 
         {/* Giant watermark logo behind everything */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -142,26 +142,26 @@ export default function Hero() {
             className="mb-8"
           >
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2">
-              <div className="w-2 h-2 rounded-full bg-sky animate-pulse" />
-              <span className="text-xs text-sky/90 font-mono uppercase tracking-wider">AI / Software / Data / Growth</span>
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <span className="text-caption text-accent/90 font-mono uppercase tracking-wider">AI / Software / Data / Growth</span>
             </div>
           </motion.div>
 
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.2rem] font-extrabold text-white tracking-tight leading-[1.1]"
+            className="text-h1 text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
             We Build{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky to-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">
               Intelligent Systems
             </span>{" "}
             for Modern Enterprises
           </motion.h1>
 
           <motion.p
-            className="mt-6 text-base md:text-lg text-white/45 max-w-2xl mx-auto leading-relaxed font-body"
+            className="mt-6 text-body text-white/45 max-w-2xl mx-auto font-body"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -175,7 +175,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45 }}
           >
-            <Button href="/portfolio" size="lg" className="bg-sky text-text-primary hover:bg-white font-bold">
+            <Button href="/portfolio" size="lg" className="bg-accent text-neutral-900 border-accent hover:bg-white font-bold">
               Explore Our Work
             </Button>
             <Button href="/contact" variant="secondary" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:border-white/50">
@@ -208,7 +208,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-ice to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-neutral-50 to-transparent" />
     </section>
   );
 }

@@ -19,8 +19,8 @@ export default function Button({ variant = "primary", size = "md", href, childre
     lg: "px-8 py-4 text-base",
   };
   const variants = {
-    primary: "bg-steel text-white hover:bg-sky hover:text-text-primary",
-    secondary: "bg-transparent border-2 border-steel text-steel hover:bg-sky hover:border-sky hover:text-text-primary",
+    primary: "bg-primary text-white hover:bg-primary-dark",
+    secondary: "bg-transparent border-2 border-primary text-primary hover:bg-primary/10",
   };
 
   const classes = cn(base, sizes[size], variants[variant], className);
