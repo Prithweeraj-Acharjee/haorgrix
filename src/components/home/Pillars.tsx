@@ -14,11 +14,11 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const gradients = [
-  "from-[#4a7a94] to-primary",
-  "from-primary to-[#6a9ab5]",
-  "from-[#3d6b84] to-primary-dark",
-  "from-[#2a5a70] to-primary",
-  "from-primary-dark to-[#4a7a94]",
+  "from-[#4a7a94] to-steel",
+  "from-steel to-[#6a9ab5]",
+  "from-[#3d6b84] to-steel-dark",
+  "from-[#2a5a70] to-steel",
+  "from-steel-dark to-[#4a7a94]",
 ];
 
 export default function Pillars() {
@@ -37,19 +37,19 @@ export default function Pillars() {
               <div className="group relative rounded-2xl overflow-hidden h-full">
                 <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${gradients[i]}`} />
 
-                <div className="bg-neutral-100 border border-neutral-200/50 rounded-2xl p-8 pt-10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
+                <div className="bg-ice border border-steel-light/50 rounded-2xl p-8 pt-10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-steel to-steel-dark text-white flex items-center justify-center mb-4 shadow-lg shadow-steel/20">
                     {iconMap[service.icon]}
                   </div>
 
-                  <h3 className="text-h3 text-neutral-800 mb-2">{service.title}</h3>
-                  <p className="text-caption text-primary mb-4 italic">{service.pitch}</p>
-                  <p className="text-body text-neutral-500 mb-6">{service.description}</p>
+                  <h3 className="text-xl font-extrabold text-text-primary tracking-tight mb-2">{service.title}</h3>
+                  <p className="text-xs font-semibold text-steel mb-3 italic">{service.pitch}</p>
+                  <p className="text-sm text-text-secondary leading-relaxed mb-6">{service.description}</p>
 
                   <div className="mt-auto space-y-3">
                     {service.capabilities.map((cap) => (
-                      <div key={cap} className="flex items-center gap-2 text-caption text-neutral-800">
-                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-accent to-primary shrink-0" />
+                      <div key={cap} className="flex items-center gap-2 text-sm text-text-primary">
+                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky to-steel shrink-0" />
                         {cap}
                       </div>
                     ))}
@@ -69,19 +69,19 @@ export default function Pillars() {
               <div className="group relative rounded-2xl overflow-hidden h-full">
                 <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${gradients[i + 3]}`} />
 
-                <div className="bg-neutral-100 border border-neutral-200/50 rounded-2xl p-8 pt-10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
+                <div className="bg-ice border border-steel-light/50 rounded-2xl p-8 pt-10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-steel to-steel-dark text-white flex items-center justify-center mb-4 shadow-lg shadow-steel/20">
                     {iconMap[service.icon]}
                   </div>
 
-                  <h3 className="text-h3 text-neutral-800 mb-2">{service.title}</h3>
-                  <p className="text-caption text-primary mb-4 italic">{service.pitch}</p>
-                  <p className="text-body text-neutral-500 mb-6">{service.description}</p>
+                  <h3 className="text-xl font-extrabold text-text-primary tracking-tight mb-2">{service.title}</h3>
+                  <p className="text-xs font-semibold text-steel mb-3 italic">{service.pitch}</p>
+                  <p className="text-sm text-text-secondary leading-relaxed mb-6">{service.description}</p>
 
                   <div className="mt-auto space-y-3">
                     {service.capabilities.map((cap) => (
-                      <div key={cap} className="flex items-center gap-2 text-caption text-neutral-800">
-                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-accent to-primary shrink-0" />
+                      <div key={cap} className="flex items-center gap-2 text-sm text-text-primary">
+                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky to-steel shrink-0" />
                         {cap}
                       </div>
                     ))}
