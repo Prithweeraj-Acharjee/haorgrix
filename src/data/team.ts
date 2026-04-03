@@ -45,7 +45,7 @@ export const teamMembers: TeamMember[] = [
     focus: ["Product Positioning & Messaging", "Pitch Decks & Case Studies", "User Advocacy"],
   },
   {
-    name: "Sudipa Biswash",
+    name: "Sudipa Biswas",
     role: "Lead, AI Evaluation & Quality Assurance",
     shortRole: "Lead, AI Evaluation & Quality Assurance",
     initial: "SB",

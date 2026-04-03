@@ -45,7 +45,7 @@ export default function TeamPage() {
           >
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2">
               <div className="w-2 h-2 rounded-full bg-sky animate-pulse" />
-              <span className="text-xs text-sky/90 font-mono uppercase tracking-wider">The Founding Squad</span>
+              <span className="text-xs text-sky font-mono uppercase tracking-wider">The Founding Squad</span>
             </div>
           </motion.div>
 
@@ -63,7 +63,7 @@ export default function TeamPage() {
           </motion.h1>
 
           <motion.p
-            className="mt-5 text-base md:text-lg text-white/45 max-w-2xl mx-auto leading-relaxed font-body"
+            className="mt-5 text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed font-body"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -73,7 +73,7 @@ export default function TeamPage() {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex items-center justify-center gap-2 text-white/30"
+            className="mt-8 flex items-center justify-center gap-2 text-white/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
