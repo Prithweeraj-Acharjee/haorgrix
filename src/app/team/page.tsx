@@ -96,29 +96,29 @@ export default function TeamPage() {
           />
 
           {/* Equal grid — 3 columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, i) => (
               <FadeIn key={member.name} delay={i * 0.1}>
                 <div className="group relative rounded-2xl overflow-hidden h-full border border-steel-light/50 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                   <div className={`h-1.5 bg-gradient-to-r ${member.gradient}`} />
 
-                  <div className="p-7">
-                    {/* Header row */}
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${member.gradient} overflow-hidden shadow-lg shadow-steel/15 shrink-0`}>
+                  <div className="p-7 flex flex-col items-center text-center">
+                    {/* Large circular photo */}
+                    <div className={`w-36 h-36 rounded-full bg-gradient-to-br ${member.gradient} p-1 mb-5 shadow-xl shadow-steel/20`}>
+                      <div className="w-full h-full rounded-full overflow-hidden">
                         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                       </div>
-                      <div>
-                        <h3 className="text-lg font-extrabold text-text-primary tracking-tight">{member.name}</h3>
-                        <p className="text-xs font-semibold text-steel">{member.shortRole}</p>
-                      </div>
                     </div>
+
+                    {/* Name & Role */}
+                    <h3 className="text-xl font-extrabold text-text-primary tracking-tight">{member.name}</h3>
+                    <p className="text-xs font-semibold text-steel mt-1 mb-4">{member.shortRole}</p>
 
                     {/* Bio */}
                     <p className="text-sm text-text-secondary leading-relaxed mb-5 font-body">{member.bio}</p>
 
                     {/* Skills */}
-                    <div className="flex flex-wrap gap-1.5 mb-5">
+                    <div className="flex flex-wrap justify-center gap-1.5 mb-5">
                       {member.skills.map((skill) => (
                         <span key={skill} className="text-[11px] font-medium text-text-primary bg-ice border border-steel-light/60 px-2.5 py-1 rounded-md">
                           {skill}
@@ -127,11 +127,11 @@ export default function TeamPage() {
                     </div>
 
                     {/* Focus */}
-                    <div className="pt-4 border-t border-steel-light/50">
+                    <div className="pt-4 border-t border-steel-light/50 w-full">
                       <p className="text-[10px] font-mono uppercase tracking-wider text-text-secondary mb-2">Key Focus</p>
                       <div className="space-y-1.5">
                         {member.focus.map((f) => (
-                          <div key={f} className="flex items-center gap-2 text-sm text-text-primary">
+                          <div key={f} className="flex items-center justify-center gap-2 text-sm text-text-primary">
                             <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky to-steel shrink-0" />
                             {f}
                           </div>
