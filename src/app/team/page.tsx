@@ -100,14 +100,12 @@ export default function TeamPage() {
             {teamMembers.map((member, i) => (
               <FadeIn key={member.name} delay={i * 0.1}>
                 <div className="group relative rounded-2xl overflow-hidden h-full border border-steel-light/50 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                  <div className={`h-1.5 bg-gradient-to-r ${member.gradient}`} />
+                  <div className="h-1.5 bg-gradient-to-r from-steel to-[#4a7a94]" />
 
-                  <div className="p-7 flex flex-col items-center text-center">
+                  <div className="p-6 flex flex-col items-center text-center">
                     {/* Large square photo */}
-                    <div className={`w-full h-[280px] bg-gradient-to-br ${member.gradient} p-1 mb-6 rounded-xl shadow-xl shadow-steel/20`}>
-                      <div className="w-full h-full rounded-lg overflow-hidden">
-                        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
-                      </div>
+                    <div className="w-full h-[280px] bg-steel/10 rounded-xl overflow-hidden mb-6">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
                     </div>
 
                     {/* Name & Role */}
