@@ -48,7 +48,7 @@ export default function Navbar() {
             alt="HaorGrix"
             width={200}
             height={60}
-            className="h-10 sm:h-14 w-auto"
+            className="h-8 sm:h-14 w-auto"
             priority
           />
         </Link>
