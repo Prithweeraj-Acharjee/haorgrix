@@ -104,9 +104,9 @@ export default function TeamPage() {
 
                   <div className="p-7 flex flex-col items-center text-center">
                     {/* Large square photo */}
-                    <div className={`w-full aspect-square bg-gradient-to-br ${member.gradient} p-1 mb-6 rounded-xl shadow-xl shadow-steel/20`}>
+                    <div className={`w-full h-[280px] bg-gradient-to-br ${member.gradient} p-1 mb-6 rounded-xl shadow-xl shadow-steel/20`}>
                       <div className="w-full h-full rounded-lg overflow-hidden">
-                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
                       </div>
                     </div>
 
