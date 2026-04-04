@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MapPin, Mail, Send, CheckCircle, Smartphone } from "lucide-react";
+import { MapPin, Mail, Send, CheckCircle } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 import AmbientCanvas from "@/components/ui/AmbientCanvas";
 

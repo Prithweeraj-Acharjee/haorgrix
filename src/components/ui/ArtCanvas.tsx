@@ -10,7 +10,25 @@ interface Particle {
   color: string;
   size: number;
   history: { x: number; y: number }[];
+  targetX: number;
+  targetY: number;
 }
+
+interface GlowParticle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  targetX: number;
+  targetY: number;
+  color: string;
+  size: number;
+  alpha: number;
+  pulseOffset: number;
+  sprite: HTMLCanvasElement;
+}
+
+type Phase = "FLOW" | "ASSEMBLE" | "HOLD";
 
 export default function ArtCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -27,11 +45,11 @@ export default function ArtCanvas() {
 
     let animationFrameId: number;
     let particles: Particle[] = [];
-    let glowParticles: any[] = [];
+    let glowParticles: GlowParticle[] = [];
     let time = 0;
     
     // States: FLOW -> ASSEMBLE -> HOLD
-    let phase: "FLOW" | "ASSEMBLE" | "HOLD" = "FLOW";
+    let phase: Phase = "FLOW";
     let phaseTimer = 0;
     let flowCycleCount = 1;
 
@@ -170,7 +188,7 @@ export default function ArtCanvas() {
           history: [],
           targetX: pTarget.x,
           targetY: pTarget.y,
-        } as any);
+        });
       }
 
       // Glow particles — reduced to 300 for performance
@@ -243,7 +261,7 @@ export default function ArtCanvas() {
           p.vx = Math.cos(blastAngle) * blastForce;
           p.vy = Math.sin(blastAngle) * blastForce;
         });
-        glowParticles.forEach((g: any) => {
+        glowParticles.forEach(g => {
           const blastAngle = Math.random() * Math.PI * 2;
           const blastForce = Math.random() * 12 + 6;
           g.vx = Math.cos(blastAngle) * blastForce;
@@ -256,7 +274,7 @@ export default function ArtCanvas() {
       const sinTime = Math.sin(time);
 
       // ─── Main particles ───
-      particles.forEach((p: any) => {
+      particles.forEach((p) => {
         
         if (phase === "FLOW") {
           const angle = Math.sin(p.x * 0.002) * Math.cos(p.y * 0.002) * Math.PI * 2 + sinTime * 1.5;
@@ -341,7 +359,7 @@ export default function ArtCanvas() {
 
       // ─── Draw glow particles (border shimmer) — no shadowBlur, uses pre-rendered sprites ───
       const sinTimeFast = Math.sin(time * 80);
-      glowParticles.forEach((g: any) => {
+      glowParticles.forEach((g) => {
         if (phase === "FLOW") {
           const angle = Math.sin(g.x * 0.003) * Math.cos(g.y * 0.003) * Math.PI * 2 + sinTime * 2.4;
           const targetVx = Math.cos(angle) * 1.2;

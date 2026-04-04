@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { motion, useInView } from "framer-motion";
 
 const CHARS = "!@#$%^&*()_+-=[]{}|;:,.<>/?0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -28,7 +28,7 @@ export default function ScrambleText({
   // Split text into array for exact length matching
   const originalChars = text.split("");
 
-  const scramble = () => {
+  const scramble = useCallback(() => {
     if (isAnimating) return;
     setIsAnimating(true);
 
@@ -68,13 +68,13 @@ export default function ScrambleText({
     };
 
     requestAnimationFrame(tick);
-  };
+  }, [isAnimating, delay, duration, originalChars, text]);
 
   useEffect(() => {
     if (isInView) {
       scramble();
     }
-  }, [isInView]);
+  }, [isInView, scramble]);
 
   return (
     <motion.span

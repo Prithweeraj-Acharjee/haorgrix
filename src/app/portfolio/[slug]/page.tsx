@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import FadeIn from "@/components/ui/FadeIn";
-import Button from "@/components/ui/Button";
+
 import AmbientCanvas from "@/components/ui/AmbientCanvas";
 
 export function generateStaticParams() {

@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion, Variants } from "framer-motion";
-import Image from "next/image";
 
 interface SectionHeadingProps {
   label?: string;
@@ -9,7 +8,6 @@ interface SectionHeadingProps {
   description?: string;
   align?: "left" | "center";
   light?: boolean;
-  showLogo?: boolean;
 }
 
 const containerVariants: Variants = {
@@ -33,7 +31,7 @@ const itemVariants: Variants = {
   },
 };
 
-export default function SectionHeading({ label, title, description, align = "center", light = false, showLogo = false }: SectionHeadingProps) {
+export default function SectionHeading({ label, title, description, align = "center", light = false }: SectionHeadingProps) {
   return (
     <motion.div
       variants={containerVariants}

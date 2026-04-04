@@ -18,7 +18,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
-  const isHomepage = pathname === "/";
   // We keep the scrolled logic to add a delicate blur when moving away from the top
   const isScrolled = scrolled;
 
