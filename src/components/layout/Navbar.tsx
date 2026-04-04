@@ -19,7 +19,8 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isHomepage = pathname === "/";
-  const showDarkText = scrolled || !isHomepage;
+  // We keep the scrolled logic to add a delicate blur when moving away from the top
+  const isScrolled = scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -34,9 +35,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        showDarkText
-          ? "bg-white shadow-sm border-b border-steel-light/50"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-art-midnight/40 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
           : "bg-transparent"
       }`}
     >
@@ -44,11 +45,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
-            src={showDarkText ? "/images/logo-light.png" : "/images/logo-dark.png"}
+            src="/images/logo-svg.svg"
             alt="HaorGrix"
-            width={200}
-            height={60}
-            className="h-8 sm:h-14 w-auto"
+            width={300}
+            height={90}
+            className="h-12 sm:h-16 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(74,148,186,0.2)]"
             priority
           />
         </Link>
@@ -61,15 +62,11 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-semibold transition-colors relative pb-1 ${
-                  showDarkText
-                    ? isActive
-                      ? "text-steel"
-                      : "text-text-primary hover:text-steel"
-                    : isActive
+                className={`text-[13px] font-medium tracking-wider uppercase transition-colors relative pb-1 ${
+                  isActive
                     ? "text-white"
-                    : "text-white/70 hover:text-white"
-                } ${isActive ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-sky after:rounded-full" : ""}`}
+                    : "text-white/60 hover:text-white"
+                } ${isActive ? "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-art-accent" : ""}`}
               >
                 {link.label}
               </Link>
@@ -84,9 +81,9 @@ export default function Navbar() {
           aria-label="Menu"
         >
           {mobileOpen ? (
-            <X size={28} className={showDarkText ? "text-text-primary" : "text-white"} />
+            <X size={28} className="text-white" />
           ) : (
-            <Menu size={28} className={showDarkText ? "text-text-primary" : "text-white"} />
+            <Menu size={28} className="text-white" />
           )}
         </button>
       </div>

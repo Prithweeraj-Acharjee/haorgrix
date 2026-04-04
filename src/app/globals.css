@@ -8,8 +8,8 @@
   }
 
   body {
-    background-color: #F4FAFE;
-    color: #2E4A5A;
+    background-color: #F8FAFC;
+    color: #1E293B;
     @apply text-body;
   }
 
@@ -23,6 +23,6 @@
 }
 
 ::selection {
-  background-color: #A9E0F6;
-  color: #2E4A5A;
+  background-color: #82CAEB;
+  color: #0F172A;
 }

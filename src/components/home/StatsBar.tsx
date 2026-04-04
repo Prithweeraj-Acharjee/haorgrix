@@ -4,7 +4,7 @@ import { stats } from "@/data/stats";
 
 export default function StatsBar() {
   return (
-    <section className="relative bg-gradient-to-r from-steel-dark via-steel to-steel-dark py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-r from-steel-dark via-steel to-steel-dark py-24 md:py-32 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-sky/10 rounded-full blur-3xl" />

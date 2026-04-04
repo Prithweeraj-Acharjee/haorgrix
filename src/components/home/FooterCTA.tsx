@@ -5,18 +5,11 @@ import Button from "@/components/ui/Button";
 
 export default function FooterCTA() {
   return (
-    <section className="relative bg-gradient-to-br from-[#1a3a4e] via-neutral-900 to-primary-dark py-24 overflow-hidden">
+    <section className="relative bg-art-midnight py-32 md:py-48 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0">
-        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="ctaGrid" width="60" height="60" patternUnits="userSpaceOnUse">
-              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(169,224,246,0.04)" strokeWidth="1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#ctaGrid)" />
-        </svg>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-art-primary/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(74,148,186,0.05),transparent_70%)]" />
       </div>
 
       <div className="max-w-site mx-auto px-6 text-center relative">
@@ -40,9 +33,9 @@ export default function FooterCTA() {
             Whether you need autonomous automation, a scalable high-concurrency platform, or structural application engineering. We build to spec.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <Button href="/contact" size="lg" className="bg-accent text-neutral-900 border-accent hover:bg-white font-bold">
-              Start a Conversation <ArrowRight className="w-4 h-4 ml-2" />
+          <div className="mt-12 flex flex-wrap gap-4 justify-center">
+            <Button href="/contact" size="lg" className="bg-art-primary text-white hover:bg-art-accent border-0 shadow-[0_0_30px_rgba(74,148,186,0.2)]">
+              Start Your Project <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
         </motion.div>

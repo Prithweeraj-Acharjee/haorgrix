@@ -10,7 +10,7 @@ export default function HowWeWork() {
   const [openStep, setOpenStep] = useState(0);
 
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-32 md:py-48 bg-white relative">
       <div className="max-w-site mx-auto px-6">
         <SectionHeading
           label="Our Process"

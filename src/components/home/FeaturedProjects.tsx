@@ -10,14 +10,14 @@ import { projects } from "@/data/projects";
 const featured = projects.filter((p) => p.featured);
 
 const categoryColors: Record<string, string> = {
-  "ai-data": "from-[#2a4a5e] to-[#4a7a94]",
+  "ai-data": "from-[#356b86] to-[#4a94ba]",
   software: "from-primary-dark to-primary",
-  "design-growth": "from-[#3d6b84] to-[#6a9ab5]",
+  "design-growth": "from-[#42728f] to-[#5ea9d1]",
 };
 
 export default function FeaturedProjects() {
   return (
-    <section id="featured-projects" className="py-24 bg-neutral-100 relative">
+    <section id="featured-projects" className="py-32 md:py-48 bg-neutral-100 relative">
       {/* Subtle bg decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 

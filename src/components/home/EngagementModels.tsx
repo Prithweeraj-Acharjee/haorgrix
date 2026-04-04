@@ -23,7 +23,7 @@ const models = [
 
 export default function EngagementModels() {
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-32 md:py-48 bg-white relative">
       <div className="max-w-site mx-auto px-6">
         <SectionHeading
           label="Work With Us"
@@ -34,8 +34,8 @@ export default function EngagementModels() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {models.map((model, i) => (
             <FadeIn key={model.title} delay={i * 0.15}>
-              <div className="bg-neutral-100 rounded-2xl p-8 border-l-4 border-primary hover:shadow-md transition-all h-full">
-                <div className="w-12 h-12 rounded-lg bg-neutral-200/50 text-primary flex items-center justify-center mb-6">
+              <div className="bg-neutral-50/50 rounded-2xl p-8 border-l-4 border-art-primary hover:shadow-lg transition-all duration-500 h-full">
+                <div className="w-12 h-12 rounded-lg bg-art-primary/10 text-art-primary flex items-center justify-center mb-6">
                   {model.icon}
                 </div>
                 <h3 className="text-h3 text-neutral-800 mb-4">{model.title}</h3>
