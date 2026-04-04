@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} ${inter.variable} ${jetbrains.variable} font-sans antialiased`}>
+      <body className={`${sora.variable} ${inter.variable} ${jetbrains.variable} font-sans antialiased bg-art-midnight`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

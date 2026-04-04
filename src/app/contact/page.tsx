@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MapPin, Mail, Send, CheckCircle } from "lucide-react";
+import { MapPin, Mail, Send, CheckCircle, Smartphone } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
-import GridPattern from "@/components/ui/GridPattern";
+import AmbientCanvas from "@/components/ui/AmbientCanvas";
 
 interface FormData {
   name: string;
@@ -23,39 +23,48 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-ice relative overflow-hidden">
-      <GridPattern className="absolute top-0 right-0 w-1/2 h-full text-steel pointer-events-none opacity-30" />
+    <div className="pt-40 pb-32 bg-art-midnight min-h-screen relative overflow-hidden">
+      {/* Physics-Based Ambient Flow Field */}
+      <AmbientCanvas />
+      {/* Surrealist background accents */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-art-primary/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-art-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-site mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <div className="max-w-site mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Left - Info */}
           <FadeIn direction="right">
-            <div>
-              <p className="text-xs font-black uppercase tracking-[0.4em] text-sky mb-4">Get In Touch</p>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-text-primary tracking-tight mb-6">
-                Let&apos;s Build Something Together
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-8 py-3 mb-12 shadow-[0_0_30px_rgba(74,148,186,0.1)]">
+                <div className="w-2.5 h-2.5 rounded-full bg-art-accent animate-[pulse_2s_ease-in-out_infinite]" />
+                <span className="text-[12px] text-white font-sans uppercase tracking-[0.4em] font-medium">Get In Touch</span>
+              </div>
+              
+              <h1 className="text-[48px] md:text-[72px] font-medium text-white leading-[1.1] tracking-tight mb-8 font-sans">
+                Let&apos;s Build Something <span className="inline-block italic text-transparent bg-clip-text bg-gradient-to-r from-art-accent via-white to-art-primary animate-gradient-x pr-6 pb-1">Exceptional.</span>
               </h1>
-              <p className="text-text-secondary leading-relaxed mb-10">
-                Whether you need an AI-powered system, a scalable enterprise platform, or a complete digital transformation. We&apos;re ready to make it happen.
+              
+              <p className="text-[18px] text-white/40 leading-relaxed mb-16 font-light tracking-wide">
+                Whether you need machine intelligence, a scalable enterprise platform, or a complete digital transformation. We&apos;re ready to architect your future.
               </p>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-steel-light text-steel flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
+              <div className="space-y-10">
+                <div className="flex items-center gap-6 group">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 text-art-accent flex items-center justify-center transition-all duration-700 shadow-2xl group-hover:scale-110 group-hover:bg-art-accent group-hover:text-art-midnight group-hover:shadow-art-accent/40 group-hover:-rotate-12">
+                    <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-semibold text-text-primary">Headquarters</p>
-                    <p className="text-sm text-text-secondary">Dhaka, Bangladesh</p>
+                    <p className="text-[11px] font-mono uppercase tracking-[0.3em] text-white/30 mb-1">HQ — Dhaka</p>
+                    <p className="text-[18px] text-white/80 font-light group-hover:text-white transition-colors duration-500">Bangladesh, South Asia</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-steel-light text-steel flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5" />
+                <div className="flex items-center gap-6 group">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 text-art-accent flex items-center justify-center transition-all duration-700 shadow-2xl group-hover:scale-110 group-hover:bg-art-primary group-hover:text-white group-hover:shadow-art-primary/40 group-hover:rotate-12">
+                    <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-semibold text-text-primary">Email</p>
-                    <p className="text-sm text-text-secondary">hello@haorgrix.com</p>
+                    <p className="text-[11px] font-mono uppercase tracking-[0.3em] text-white/30 mb-1">Official Enquiry</p>
+                    <p className="text-[18px] text-white/80 font-light group-hover:text-white transition-colors duration-500">hello@haorgrix.com</p>
                   </div>
                 </div>
               </div>
@@ -65,73 +74,80 @@ export default function ContactPage() {
           {/* Right - Form */}
           <FadeIn direction="left">
             {submitted ? (
-              <div className="bg-white rounded-2xl p-12 border border-steel-light text-center shadow-sm">
-                <CheckCircle className="w-16 h-16 text-steel mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-text-primary mb-3">Message Sent!</h3>
-                <p className="text-text-secondary">We&apos;ll get back to you within 24 hours.</p>
+              <div className="relative bg-[#141622]/60 backdrop-blur-3xl rounded-[3rem] p-16 border border-white/10 text-center shadow-2xl shadow-black/50 overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-art-primary via-art-accent to-art-primary animate-gradient-x" />
+                <div className="w-24 h-24 rounded-full bg-art-accent/10 flex items-center justify-center mx-auto mb-10 ring-1 ring-art-accent/20">
+                  <CheckCircle className="w-12 h-12 text-art-accent" />
+                </div>
+                <h3 className="text-[32px] font-medium text-white mb-4">Transmission Received</h3>
+                <p className="text-[16px] text-white/40 font-light leading-relaxed">Our architects will reach out within 24 hours.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded-2xl p-8 border border-steel-light shadow-sm space-y-5">
-                <div>
-                  <label className="block text-xs font-semibold text-text-primary mb-1.5 uppercase tracking-wider">Name *</label>
-                  <input
-                    {...register("name", { required: "Name is required" })}
-                    className="w-full px-4 py-3 rounded-xl border border-steel-light bg-ice text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-steel focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                  {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
+              <form onSubmit={handleSubmit(onSubmit)} className="group relative bg-[#141622]/40 backdrop-blur-3xl rounded-[3rem] p-10 sm:p-14 border border-white/5 hover:border-white/20 transition-all duration-700 shadow-2xl shadow-black/50 space-y-10 overflow-hidden">
+                {/* Interactive Top Accent Stripe */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-art-primary via-art-accent to-art-primary opacity-40 group-hover:opacity-100 group-hover:animate-gradient-x transition-all duration-700" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <label className="block text-[11px] font-mono uppercase tracking-[0.2em] text-white/30 ml-2">Full Name *</label>
+                    <input
+                      {...register("name", { required: "Required" })}
+                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/5 text-white text-[15px] focus:outline-none focus:ring-1 focus:ring-art-accent/40 focus:border-art-accent/40 transition-all font-light placeholder-white/10"
+                      placeholder="J. Doe"
+                    />
+                    {errors.name && <p className="text-art-accent text-[10px] mt-1 ml-2 uppercase font-mono">{errors.name.message}</p>}
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="block text-[11px] font-mono uppercase tracking-[0.2em] text-white/30 ml-2">Work Email *</label>
+                    <input
+                      {...register("email", { required: "Required", pattern: /^\S+@\S+$/i })}
+                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/5 text-white text-[15px] focus:outline-none focus:ring-1 focus:ring-art-accent/40 focus:border-art-accent/40 transition-all font-light placeholder-white/10"
+                      placeholder="you@company.com"
+                    />
+                    {errors.email && <p className="text-art-accent text-[10px] mt-1 ml-2 uppercase font-mono">Invalid Email</p>}
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-semibold text-text-primary mb-1.5 uppercase tracking-wider">Email *</label>
-                  <input
-                    {...register("email", { required: "Email is required", pattern: { value: /^\S+@\S+$/i, message: "Invalid email" } })}
-                    className="w-full px-4 py-3 rounded-xl border border-steel-light bg-ice text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-steel focus:border-transparent"
-                    placeholder="you@company.com"
-                  />
-                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <label className="block text-[11px] font-mono uppercase tracking-[0.2em] text-white/30 ml-2">Company</label>
+                    <input
+                      {...register("company")}
+                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/5 text-white text-[15px] focus:outline-none focus:ring-1 focus:ring-art-accent/40 focus:border-art-accent/40 transition-all font-light placeholder-white/10"
+                      placeholder="Enter company"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="block text-[11px] font-mono uppercase tracking-[0.2em] text-white/30 ml-2">Interest</label>
+                    <select
+                      {...register("service")}
+                      className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/5 text-white text-[15px] focus:outline-none focus:ring-1 focus:ring-art-accent/40 focus:border-art-accent/40 transition-all font-light appearance-none"
+                    >
+                      <option value="" className="bg-art-midnight">Select Service</option>
+                      <option value="ai-data" className="bg-art-midnight">AI & Data Systems</option>
+                      <option value="software" className="bg-art-midnight">Platform Engineering</option>
+                      <option value="design-growth" className="bg-art-midnight">Product Design</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-semibold text-text-primary mb-1.5 uppercase tracking-wider">Company</label>
-                  <input
-                    {...register("company")}
-                    className="w-full px-4 py-3 rounded-xl border border-steel-light bg-ice text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-steel focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-text-primary mb-1.5 uppercase tracking-wider">Service Interest</label>
-                  <select
-                    {...register("service")}
-                    className="w-full px-4 py-3 rounded-xl border border-steel-light bg-ice text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-steel focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-data">AI & Data Systems</option>
-                    <option value="software">Software & Platform Engineering</option>
-                    <option value="design-growth">Digital Experience & Growth</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-text-primary mb-1.5 uppercase tracking-wider">Message *</label>
+                <div className="space-y-2">
+                  <label className="block text-[11px] font-mono uppercase tracking-[0.2em] text-white/30 ml-2">Project Brief *</label>
                   <textarea
-                    {...register("message", { required: "Message is required", minLength: { value: 20, message: "At least 20 characters" } })}
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-steel-light bg-ice text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-steel focus:border-transparent resize-none"
-                    placeholder="Tell us about your project..."
+                    {...register("message", { required: true, minLength: 20 })}
+                    rows={4}
+                    className="w-full px-6 py-5 rounded-2xl bg-white/5 border border-white/5 text-white text-[15px] focus:outline-none focus:ring-1 focus:ring-art-accent/40 focus:border-art-accent/40 transition-all font-light placeholder-white/10 resize-none"
+                    placeholder="Tell us about the project..."
                   />
-                  {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-steel text-white py-3.5 rounded-xl font-bold text-sm hover:bg-steel-dark transition-colors flex items-center justify-center gap-2"
+                  className="group w-full bg-white text-art-midnight py-5 rounded-full font-bold text-[14px] uppercase tracking-[0.3em] hover:bg-art-accent transition-all duration-700 flex items-center justify-center gap-3 shadow-2xl shadow-white/5"
                 >
-                  <Send className="w-4 h-4" />
-                  Send Message
+                  <Send className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  Initiate Project
                 </button>
               </form>
             )}

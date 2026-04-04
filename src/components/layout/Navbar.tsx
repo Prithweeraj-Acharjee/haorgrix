@@ -92,25 +92,25 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden fixed inset-0 top-16 bg-white z-40"
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden fixed inset-0 top-16 sm:top-20 bg-art-midnight/95 backdrop-blur-3xl z-40"
           >
-            <div className="px-6 py-8 flex flex-col h-full">
+            <div className="px-8 py-12 flex flex-col h-full">
               {/* Nav links - large and tappable */}
-              <div className="space-y-2 flex-1">
+              <div className="space-y-4 flex-1">
                 {links.map((link) => {
                   const isActive = pathname === link.href;
                   return (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`block py-4 px-4 rounded-xl text-xl font-bold transition-colors ${
+                      className={`block py-5 px-6 rounded-3xl text-[24px] font-medium transition-all duration-500 ${
                         isActive
-                          ? "text-steel bg-steel-light/50"
-                          : "text-text-primary hover:bg-ice active:bg-steel-light/30"
+                          ? "text-art-accent bg-white/5 shadow-[0_0_30px_rgba(130,202,235,0.05)] border border-white/10"
+                          : "text-white/60 hover:text-white hover:bg-white/5"
                       }`}
                       onClick={() => setMobileOpen(false)}
                     >
@@ -121,8 +121,9 @@ export default function Navbar() {
               </div>
 
               {/* Footer info */}
-              <div className="pb-8">
-                <p className="text-center text-xs text-text-secondary">hello@haorgrix.com</p>
+              <div className="pb-20 text-center">
+                <p className="text-[12px] font-mono uppercase tracking-[0.4em] text-white/20 mb-4">Dhaka, Bangladesh</p>
+                <p className="text-[14px] text-white/40 font-light">hello@haorgrix.com</p>
               </div>
             </div>
           </motion.div>

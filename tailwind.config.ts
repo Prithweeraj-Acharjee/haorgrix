@@ -69,9 +69,17 @@ const config: Config = {
         shimmer: {
           "100%": { transform: "translateX(200%)" },
         },
+        "gradient-x": {
+          "0%, 100%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+        },
       },
       animation: {
         shimmer: "shimmer 6s infinite",
+        "gradient-x": "gradient-x 15s ease infinite",
+      },
+      backgroundSize: {
+        "300%": "300% 300%",
       },
     },
   },
